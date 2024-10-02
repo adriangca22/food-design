@@ -1,0 +1,51 @@
+/* Animación para el menú desplegable en móviles */
+@keyframes slideDown {
+    from {
+      max-height: 0;
+      opacity: 0;
+    }
+    to {
+      max-height: 200px;
+      opacity: 1;
+    }
+  }
+  
+  .mobile-menu {
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  /* Efecto de hover para los enlaces del menú */
+  .menu-link {
+    position: relative;
+  }
+  
+  .menu-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .menu-link:hover::after {
+    transform: scaleX(1);
+  }
+  
+  /* Estilo para el logo */
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  /* Efecto de hover para el icono del carrito */
+  .cart-icon {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .cart-icon:hover {
+    transform: scale(1.1);
+  }
